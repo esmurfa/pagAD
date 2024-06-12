@@ -1,0 +1,88 @@
+  *{
+    margin: 0;
+    padding: 0;
+    
+.btn-coleccion-activa{
+      color: #fff; /* Cambia el color del texto para que sea visible en el fondo */
+      /* Otros estilos de resaltado que desees agregar */
+  }
+    
+  }
+  body {
+    background-color: #cfcbcb;
+  }
+  .carousel{
+    height: 40%;
+  }
+
+        h2 {
+          color: #333;
+        }   
+       #user-info, #purchase-history {
+          margin-bottom: 20px;
+        }
+  .Informacion {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }    
+  .iconos{
+    font-size: 200%;
+    position: relative;
+    display: grid;
+    place-items: center;
+      }
+    .icon-search{
+      position: absolute;
+    }
+    .buscadorDiv{
+      position: relative;
+     }
+
+     .inpBuscador{
+      position: relative;
+      border-radius: 15px;
+    
+      width: 100%;
+      height: 50px;
+    }
+    .botonesL{
+        position: relative;
+        left: 0;
+        width: 100%;
+        border-color: black;
+        color: black;
+        border-radius: 18px;
+    }
+    .ADcolor{
+        background-color: #62aeec;
+    }
+    
+    a:link, a:visited,  a:hover, a:active
+    {
+      color: #000000;
+      text-decoration: none;
+    }
+    *{
+      text-decoration: none;
+    }
+    .buscador{
+    position: relative;
+    top: 20px;
+    left: 0;
+    }
+
+    
+     .imagen-producto{
+      width: 100%;
+      margin-top: 5px;
+      padding: 10px;
+     }
+
+    
+    .desplegableImagenes{
+      background-color: #000000;
+    }
+ 

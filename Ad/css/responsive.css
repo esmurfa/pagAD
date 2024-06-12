@@ -1,0 +1,9 @@
+/* Estilos para pantallas más pequeñas (hasta 768px) */
+@media (max-width: 768px) {
+    /* Aquí van tus estilos para dispositivos móviles */
+  }
+  
+  /* Estilos para pantallas medianas y grandes (desde 769px en adelante) */
+  @media (min-width: 769px) {
+    /* Aquí van tus estilos para tabletas y computadoras */
+  }

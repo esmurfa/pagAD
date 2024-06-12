@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Área de Usuario - Mi Mercado</title>
+  <!-- Incluir Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Enlace a tu archivo de estilos personalizados -->
+  <!-- Enlaces para iconos -->
+  <link rel="stylesheet" href="iconos/demo-files/demo.css">
+  <link rel="stylesheet" href="iconos/style.css">
+  <link rel="stylesheet" href="css/estilo.css">
+  <style>
+    .btn-coleccion-activa {
+      background-color: #007bff;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="ADcolor navbar-expand-md">
+      <div class="container-fluid" >
+       <div class="">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+       <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+          <div class=" col-1" > 
+              <img src="img/LOGO AD.png" alt="logoAD" width="80px">
+          </div>
+          
+            <div class="col-2" >
+              <ul>
+                <li class=" dropdown">
+                    <a class=" dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Empresas
+                    </a>
+                    <ul id="dwn-empresas" class="dropdown-menu">
+                      <li><a class="dropdown-item" href="AllEmpresas.html">Todas las empresas</a></li>                   
+                    </ul>
+                  </li>
+                </ul>
+                <ul>
+                <li class=" dropdown">
+                  <a class=" dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                   Categorias
+                  </a>
+                  <ul id="dwn-categoria" class="dropdown-menu">
+                  </ul>
+                </li>
+              </ul>
+              <ul>
+              <li class=" dropdown">
+                <a class=" " href="inicio.html" role="button" data-bs-toggle="" aria-expanded="false">
+                 Inicio
+                </a>
+              </li>
+            </ul>
+          </div>
+            <div class="col 12 col-md-3" >
+              <a href="pagticket1.html" class=" botonesL btn btn-primary"> AreaTecnica</a>
+        </div>
+           
+            <div class="col-12 col-md-4" >
+              <div class="buscadorDiv">
+                <form class="d-flex " role="search">
+                  <input class="form-control inpBuscador" type="search" placeholder="    Buscar" aria-label="Search" style="height: 50%;" >
+                  <button class="btn icon-search" type="submit"></button>
+                </form>
+              
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+              </button> 
+          </div>
+         </div>
+         <div class=" col-12 col-md-1">
+          <a href="carrito.php" class=" iconos btn icon-shopping_cart" ></a>
+        </div>
+          <div class=" col-12 col-md-1">
+            <a href="usuario.php" class=" iconos btn icon-user-circle" ></a>
+          </div>
+         </div>
+     </div>
+      </div>
+  
+  
+  </nav>
+
+<div class="container mt-5">
+    <div class="row">
+    <div class="col-8">
+    <h1 class="mb-4">Carrito de Compras</h1>
+    <div class="row"><button id="btnCrearColeccion" type="button" class="btn btn-info mt-3"> Crear Coleccion</button></div>
+   <div id="Colecciones">
+
+  </div>
+
+    <!-- Lista de productos en el carrito -->
+    <ul id="productos-lista" class="list-group mb-3"></ul>
+
+    <!-- Total del carrito -->
+    <div class="d-flex justify-content-between">
+        <span>Total</span>
+        <strong id="precioTotal">$0.00</strong>
+    </div>
+
+    <!-- Botón de compra -->
+    <button type="button" class="btn btn-primary mt-3">Comprar</button>
+    <button type="button" onclick="CompartirCarrito()" class="btn btn-info mt-3">Compartir Carrito</button>
+</div>
+
+     <div class="col-4">
+     <h1>OFERTAS</h1>
+    <div class="row" style="padding: 0%; margin: 0%;">
+        <div id="carouselExampleCaptions" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://w7.pngwing.com/pngs/388/487/png-transparent-computer-icons-graphy-img-landscape-graphy-icon-miscellaneous-angle-text.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>First slide label</h5>
+                  <p>Some representative placeholder content for the first slide.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="https://w7.pngwing.com/pngs/388/487/png-transparent-computer-icons-graphy-img-landscape-graphy-icon-miscellaneous-angle-text.png" class="d-block w-100 imgP" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Second slide label</h5>
+                  <p>Some representative placeholder content for the second slide.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="https://w7.pngwing.com/pngs/388/487/png-transparent-computer-icons-graphy-img-landscape-graphy-icon-miscellaneous-angle-text.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Third slide label</h5>
+                  <p>Some representative placeholder content for the third slide.</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>    
+    </div>
+  </div>
+</div>
+</div>
+<div class="modal fade" id="crearColeccionModal" tabindex="-1" aria-labelledby="crearColeccionModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="crearColeccionModalLabel">Crear Colección</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Contenido del formulario para crear la colección -->
+        <form method="post" action="PHP/crearColeccion.php">
+          <div class="mb-3">
+            <label for="nombreColeccion" class="form-label">Nombre de la Colección</label>
+            <input type="text" name="coleccion" class="form-control" id="nombreColeccion" placeholder="Ingrese el nombre de la colección" required>
+          </div>
+          <!-- Otros campos del formulario si es necesario -->
+
+          <button type="submit" class="btn btn-primary" onclick="crearColeccion()">Crear Colección</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+<script src="js/funciones.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Ejecutar la función al cargar la página
+        cargarColecciones();
+        const btnCrearColeccion = document.querySelector("#btnCrearColeccion");
+    const modalCrearColeccion = new bootstrap.Modal(document.getElementById("crearColeccionModal"));
+
+    btnCrearColeccion.addEventListener("click", function() {
+      modalCrearColeccion.show();
+    });
+    });
+    
+    let precioTotal = 0;  // Inicializar el precio total
+    
+    function cargarColecciones() {
+    const URL = '../Final1/PHP/Colecciones.php';
+    fetch(URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      }
+    })
+    .then(response => response.json())
+    .then(colecciones => {
+      console.log(colecciones);
+      // Obtén el div de colecciones por su id
+      var divColecciones = document.getElementById("Colecciones");
+
+      // Limpiar el contenido existente en el div
+      divColecciones.innerHTML = '';
+
+      // Itera sobre el array de colecciones y crea un botón para cada una
+      colecciones.forEach(function(coleccion, index) {
+        // Crea un nuevo botón
+        var boton = document.createElement("button");
+
+        // Configura los atributos del botón
+        boton.type = "button";
+        boton.className = "btn btn-info mt-3";
+        boton.textContent = coleccion.nombre;
+
+      
+
+        // Agrega el evento onclick al botón para llamar a la función cargarCarrito con el id de la colección
+        boton.onclick = function() {
+          // Antes de cargar el carrito, resalta el botón activo
+          resaltarBotonActivo(boton);
+          cargarCarrito(coleccion.id);
+        };
+
+        // Agrega el botón al div de colecciones
+        divColecciones.appendChild(boton);
+      });
+    });
+  }
+
+  function resaltarBotonActivo(boton) {
+    // Remover la clase activa de todos los botones
+    var botones = document.getElementsByClassName("btn-coleccion-activa");
+    for (var i = 0; i < botones.length; i++) {
+      botones[i].classList.remove("btn-coleccion-activa");
+    }
+
+    // Agregar la clase activa al botón seleccionado
+    boton.classList.add("btn-coleccion-activa");
+  }
+  
+  
+  function cargarCarrito(idColeccion) {
+      alert(idColeccion);
+      
+        // Hacer la solicitud fetch al servidor (PHP)
+        const URL = '../Final1/PHP/listarCarrito.php';
+
+        fetch(URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        id: idColeccion
+      }),
+    })
+
+            .then(response => response.json())
+            .then(data => {
+
+                // Manipular los datos recibidos y construir la lista
+                construirLista(data);
+            })
+            .catch(error => console.error('Error al obtener los datos:', error));
+    }
+    
+    function construirLista(data) {
+    // Obtener el contenedor de la lista
+    const listaContainer = document.getElementById('productos-lista');
+    
+    // Limpiar el contenido existente en el contenedor
+    listaContainer.innerHTML = '';
+    
+    // Reiniciar el precio total
+    precioTotal = 0;
+
+    // Iterar sobre los datos y construir elementos de lista
+    data.forEach(producto => {
+        const listItem = document.createElement('li');
+        listItem.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'align-items-center');
+    
+        // Construir la estructura interna del elemento de lista
+        listItem.innerHTML = `
+            <div class="d-flex">
+                <img src="${producto.imagen}" alt="${producto.nombre}" width="50px" height="50px" class="mr-3">
+                <div>
+                    <h6 class="my-0">${producto.nombre}</h6>
+                    <small class="text-muted">${producto.descripcion}</small>
+                </div>
+            </div>
+            <span class="text-muted">$${producto.precio}</span>
+        `;
+    
+        // Agregar el elemento de lista al contenedor
+        listaContainer.appendChild(listItem);
+    
+        // Actualizar el precio total
+        precioTotal += parseFloat(producto.precio);
+    });
+
+    // Obtener el contenedor del total
+    const total = document.getElementById('precioTotal');
+    total.innerHTML= "$"+precioTotal;
+    // Limpiar el contenido existente en el contenedor
+    
+}
+
+
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</html>

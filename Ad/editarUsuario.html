@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Área de Usuario - Mi Merscado</title>
+  <!-- Incluir Bootstrap 5 CSS -->
+ 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!--links iconos-->  
+  <link rel="stylesheet" href="iconos/demo-files/demo.css">
+  <link rel="stylesheet" href="iconos/style.css">
+   <link rel="stylesheet" href="css/estilo.css" >
+</head>
+<body>
+
+  <nav class="ADcolor navbar-expand-md">
+    <div class="container-fluid" >
+     <div class="">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+     <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+        <div class=" col-1" > 
+            <img src="img/LOGO AD.png" alt="logoAD" width="80px">
+        </div>
+        
+          <div class="col-2" >
+            <ul>
+              <li class=" dropdown">
+                  <a class=" dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Empresas
+                  </a>
+                  <ul id="dwn-empresas" class="dropdown-menu">
+                    <li><a class="dropdown-item" href="AllEmpresas.html">Todas las empresas</a></li>                   
+                  </ul>
+                </li>
+              </ul>
+              <ul>
+              <li class=" dropdown">
+                <a class=" dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 Categorias
+                </a>
+                <ul id="dwn-categoria" class="dropdown-menu">
+                </ul>
+              </li>
+            </ul>
+            <ul>
+            <li class=" dropdown">
+              <a class=" " href="inicio.html" role="button" data-bs-toggle="" aria-expanded="false">
+               Inicio
+              </a>
+            </li>
+          </ul>
+        </div>
+          <div class="col 12 col-md-3" >
+            <a href="pagticket1.html" class=" botonesL btn btn-primary"> AreaTecnica</a>
+      </div>
+         
+          <div class="col-12 col-md-4" >
+            <div class="buscadorDiv">
+              <form class="d-flex " role="search">
+                <input class="form-control inpBuscador" type="search" placeholder="    Buscar" aria-label="Search" style="height: 50%;" >
+                <button class="btn icon-search" type="submit"></button>
+              </form>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button> 
+        </div>
+       </div>
+       <div class=" col-12 col-md-1">
+        <a href="carrito.php" class=" iconos btn icon-shopping_cart" ></a>
+      </div>
+        <div class=" col-12 col-md-1">
+          <a href="usuario.php" class=" iconos btn icon-user-circle" ></a>
+        </div>
+       </div>
+   </div>
+    </div>
+
+
+</nav>
+
+<main id="Informacion" class="container Informacion">
+    <div class="container mt-5">
+        <h2 class="mb-4">Editar Usuario</h2>
+
+        <form action="PHP/registro.php" method="POST">
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre:</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="apellidos" class="form-label">Apellidos:</label>
+                <input type="text" class="form-control" id="apellido" name="apellido" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="telefono" class="form-label">Teléfono:</label>
+                <input type="tel" class="form-control" id="telefono" name="telefono">
+            </div>
+
+            <div class="mb-3">
+                <label for="contrasena" class="form-label">Contraseña:</label>
+                <input type="password" class="form-control" id="contrasena" name="clave" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="nuevaContrasena" class="form-label">Nueva Contraseña:</label>
+                <input type="password" class="form-control" id="nuevaContrasena" name="nuevaClave" required>
+            </div>
+
+            <button type="submit" name="editar" class="btn botonesL btn-success">editar</button>
+        </form>
+</main>
+
+<script src="js/funciones.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Administración de Estado de Empresas</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+        <!-- Hoja de estilos -->
+        <link rel="stylesheet" href="css/estilo.css"> 
+      <!--links iconos-->  
+    <link rel="stylesheet" href="iconos/demo-files/demo.css">
+    <link rel="stylesheet" href="iconos/style.css">
+</head>
+<nav class="ADcolor navbar-expand-md">
+  <div class="container-fluid" >
+   <div class="">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+   <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+      <div class=" col-1" > 
+          <img src="img/LOGO AD.png" alt="logoAD" width="80px">
+      </div>
+      
+        <div class="col-2" >
+          <ul>
+            <li class=" dropdown">
+                <a class=" dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Empresas
+                </a>
+                <ul id="dwn-empresas" class="dropdown-menu">
+                  <li><a class="dropdown-item" href="AllEmpresas.html">Todas las empresas</a></li>                   
+                </ul>
+              </li>
+            </ul>
+            <ul>
+            <li class=" dropdown">
+              <a class=" dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+               Categorias
+              </a>
+              <ul id="dwn-categoria" class="dropdown-menu">
+              </ul>
+            </li>
+          </ul>
+          <ul>
+          <li class=" dropdown">
+            <a class=" " href="inicio.html" role="button" data-bs-toggle="" aria-expanded="false">
+             Inicio
+            </a>
+          </li>
+        </ul>
+      </div>
+        <div class="col 12 col-md-3" >
+          <a href="pagticket1.html" class=" botonesL btn btn-primary"> AreaTecnica</a>
+    </div>
+       
+        <div class="col-12 col-md-4" >
+          <div class="buscadorDiv">
+            <form class="d-flex " role="search">
+              <input class="form-control inpBuscador" type="search" placeholder="    Buscar" aria-label="Search" style="height: 50%;" >
+              <button class="btn icon-search" type="submit"></button>
+            </form>
+          
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button> 
+      </div>
+     </div>
+     <div class=" col-12 col-md-1">
+      <a href="carrito.php" class=" iconos btn icon-shopping_cart" ></a>
+    </div>
+      <div class=" col-12 col-md-1">
+        <a href="usuario.php" class=" iconos btn icon-user-circle" ></a>
+      </div>
+     </div>
+ </div>
+  </div>
+
+
+</nav>
+<body>
+
+    <div class="container mt-5">
+        <h2>Estado de Empresas</h2>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre de la Empresa</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="tbodyEmpresas">
+                <tr>
+                    <td>1</td>
+                    <td>Empresa A</td>
+                    <td><span class="badge bg-success">Activa</span></td>
+                    <td>
+                        <button class="btn btn-warning">Pausar</button>
+                        <button class="btn btn-danger">Desactivar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Empresa B</td>
+                    <td><span class="badge bg-warning text-dark">Pausada</span></td>
+                    <td>
+                        <button class="btn btn-success">Activar</button>
+                        <button class="btn btn-danger">Desactivar</button>
+                    </td>
+                </tr>
+                <!-- Agrega más filas según sea necesario -->
+            </tbody>
+        </table>
+    </div>
+
+<script src="js/funciones.js"></script>
+    <!-- Bootstrap JS y Popper.js (necesarios para algunos componentes de Bootstrap) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
